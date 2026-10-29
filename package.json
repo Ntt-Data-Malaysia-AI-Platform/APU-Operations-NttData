@@ -1,0 +1,20 @@
+{
+  "name": "apu-operations-ai",
+  "version": "0.1.0",
+  "private": true,
+  "description": "APU Operations AI: Gemini agents for IT, HR, admissions, finance and institutional knowledge. Static demo for GitHub Pages.",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "node scripts/build-static.mjs",
+    "preview": "node scripts/serve-static.mjs",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "esbuild": "^0.28.2",
+    "typescript": "^7.0.2"
+  }
+}
