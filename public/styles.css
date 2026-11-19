@@ -383,8 +383,8 @@ body[data-view="boot"] .topbar { display: none; }
 .login-card-head p { margin: 2px 0 0; color: var(--text-2); font-size: 14px; }
 .login-card .field { margin-bottom: 16px; }
 .input-wrap { position: relative; display: flex; align-items: center; }
-.input-wrap > .icon { position: absolute; left: 13px; width: 18px; height: 18px; color: var(--text-2); pointer-events: none; }
-.input-wrap input { width: 100%; padding: 12px 44px 12px 42px; }
+.input-wrap > .icon { position: absolute; left: 15px; width: 18px; height: 18px; color: var(--text-2); pointer-events: none; }
+.login-card .input-wrap input { width: 100%; padding: 12px 46px 12px 46px; } /* beats the generic .field input padding */
 .login-card .field input {
   font: inherit; font-weight: 500; font-size: 15px; color: var(--text);
   border-radius: 14px; border: 1px solid var(--border); background: var(--surface-2);
@@ -1364,3 +1364,21 @@ body[data-view="boot"] .topbar { display: none; }
   .partner-logo img { height: 26px; }
   .logo-badge img { height: 24px; }
 }
+
+/* "Gemini AI for Education Reimagined" tagline on the sign-in panel */
+.login-tagline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  align-self: flex-start;
+  margin: 0;
+  padding: 7px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.login-tagline .icon { width: 15px; height: 15px; fill: #fff; stroke: none; }
