@@ -11,4 +11,4 @@ Student academic records (transcripts and award records) are kept permanently. O
 Staff may collect and use personal data only for the purpose it was given. Share personal data only with people who need it for their work, and never on personal messaging apps or personal cloud storage. Report any suspected data breach to the Data Protection Officer within 24 hours. Students and staff can request access to their personal data through the Registrar's Office.
 
 ## Using AI tools with institutional data
-Use only university-approved AI tools, such as the APU Gemini agents, with institutional or personal data. Do not paste personal data or confidential documents into public AI services.
+Use only university-approved AI tools, such as these Gemini agents, with institutional or personal data. Do not paste personal data or confidential documents into public AI services.

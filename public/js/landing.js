@@ -2,9 +2,9 @@ import { icon, PERSONA_ICONS } from "./icons.js";
 import { escapeHtml as e } from "./markdown.js";
 
 const PILLARS = [
-  { icon: "doc", title: "Grounded in approved documents", text: "Every answer comes from APU's own policies, with sources you can open." },
+  { icon: "doc", title: "Grounded in approved documents", text: "Every answer comes from your institution's own policies, with sources you can open." },
   { icon: "lock", title: "Role-based access", text: "Each agent reads only the documents and systems its department allows." },
-  { icon: "gemini", title: "Gemini on Google Cloud", text: "Built for Gemini on Vertex AI, running in APU's own cloud project." },
+  { icon: "gemini", title: "Gemini on Google Cloud", text: "Built for Gemini on Vertex AI, running in your own Google Cloud project." },
   { icon: "users", title: "Hands off to people", text: "Agents log tickets and cases, and escalate sensitive matters to staff." },
 ];
 
@@ -14,9 +14,9 @@ export function renderLanding(root, cfg, { lastPersona }) {
   root.innerHTML = `
     <section class="hero">
       <div class="hero-copy">
-        <span class="kicker">${icon("gemini", "spark-icon")} NTT DATA × APU · Powered by Gemini</span>
-        <h1>Gemini agents for <span class="grad-text rainbow">every APU department</span></h1>
-        <p class="lead">Five AI agents for IT, HR, admissions, finance and administration. Each has a live dashboard, one-click tools, and answers grounded in APU's approved documents.</p>
+        <span class="kicker">${icon("gemini", "spark-icon")} NTT DATA · Powered by Gemini</span>
+        <h1>Gemini agents for <span class="grad-text rainbow">every department</span></h1>
+        <p class="lead">Five AI agents for IT, HR, admissions, finance and administration. Each has a live dashboard, one-click tools, and answers grounded in your approved documents.</p>
         <div class="hero-cta">
           <a class="btn btn-primary" href="#personas">Choose an agent ${icon("arrow")}</a>
           ${last ? `<a class="btn btn-ghost" href="#/${e(last.id)}" data-persona="${e(last.id)}"><span class="dot"></span>Back to ${e(last.label)}</a>` : ""}
@@ -85,9 +85,9 @@ export function renderLanding(root, cfg, { lastPersona }) {
 
     <footer class="site-footer">
       <span>Delivered by</span>
-      <img src="brand/ntt-data-logo.png" alt="NTT DATA" />
+      <span class="logo-badge"><img src="brand/ntt-data-logo-white.png" alt="NTT DATA" /></span>
       <span class="sep">·</span>
-      <span>Demonstration build with sample data. Not official APU information.</span>
+      <span>Demonstration build with sample data. Not official institutional information.</span>
     </footer>`;
 
   // Smooth-scroll the in-page link without changing the route.

@@ -12,7 +12,7 @@ export function createChat(root, { onOpen }) {
       <span class="as-avatar">${icon("sparkle")}</span>
       <div class="as-title">
         <strong id="as-name">AI Assistant</strong>
-        <small><span class="live-dot"></span> Grounded in APU knowledge</small>
+        <small><span class="live-dot"></span> Grounded in approved documents</small>
       </div>
       <button type="button" class="icon-btn as-expand" id="as-expand" title="Wider panel" aria-label="Toggle wider assistant panel" aria-pressed="false">${icon("widen")}</button>
       <button type="button" class="icon-btn" id="as-new" title="New conversation" aria-label="New conversation">${icon("refresh")}</button>
@@ -324,7 +324,7 @@ export function createChat(root, { onOpen }) {
   });
 
   // Wider panel on desktop, remembered per browser.
-  const WIDE_KEY = "apu-ops-wide-assistant";
+  const WIDE_KEY = "ntt-ops-wide-assistant";
   const setWide = (wide) => {
     document.body.classList.toggle("assistant-wide", wide);
     els.expand.setAttribute("aria-pressed", String(wide));

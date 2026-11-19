@@ -31,7 +31,7 @@ const els = {
   toast: $("toast"),
 };
 
-const STORAGE_KEY = "apu-ops-agent";
+const STORAGE_KEY = "ntt-ops-agent";
 const remember = (id) => {
   try { localStorage.setItem(STORAGE_KEY, id); } catch { /* storage unavailable */ }
 };
@@ -100,7 +100,7 @@ function showLogin(notice) {
   els.loginNotice.hidden = !notice;
   els.loginNotice.textContent = notice ?? "";
   els.loginPass.value = "";
-  document.title = "Sign in · APU Operations AI";
+  document.title = "Sign in · NTT DATA Operations AI";
   window.scrollTo(0, 0);
   (els.loginUser.value ? els.loginPass : els.loginUser).focus();
 }
@@ -166,7 +166,7 @@ function showLanding() {
   els.fab.hidden = true;
   closeAssistant();
   renderLanding(els.landing, cfg, { lastPersona: recall() });
-  document.title = "APU Operations AI";
+  document.title = "NTT DATA Operations AI";
   window.scrollTo(0, 0);
 }
 
@@ -188,7 +188,7 @@ async function showWorkspace(persona) {
   els.picker.hidden = false;
   els.fab.hidden = false;
   els.select.value = persona.id;
-  document.title = `${persona.label} · APU Operations AI`;
+  document.title = `${persona.label} · NTT DATA Operations AI`;
   chat.setPersona(persona);
   window.scrollTo(0, 0);
   await renderWorkspace(els.main, persona, {

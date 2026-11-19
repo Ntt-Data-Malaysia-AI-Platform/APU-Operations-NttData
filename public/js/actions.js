@@ -56,7 +56,7 @@ export const ACTIONS = {
       title: "Wi-Fi and VPN setup",
       blurb: "Connection guide for your device.",
       fields: [
-        { name: "what", label: "Set up", type: "select", options: ["Campus Wi-Fi (APU-Secure)", "VPN for remote access", "Both"] },
+        { name: "what", label: "Set up", type: "select", options: ["Campus Wi-Fi (Campus-Secure)", "VPN for remote access", "Both"] },
         { name: "os", label: "Operating system", type: "select", options: ["Windows 11", "macOS", "iOS", "Android", "Linux"] },
       ],
       prompt: (v) => `Give me step-by-step instructions to set up ${v.what} on ${v.os}, including the exact settings to choose.`,
@@ -123,7 +123,7 @@ export const ACTIONS = {
         { name: "interests", label: "Interests and goals", type: "textarea", placeholder: "e.g. ethical hacking, wants to work in a bank", required: true },
       ],
       prompt: (v) =>
-        `Recommend up to two APU programmes for an applicant with ${v.results} who is interested in: ${v.interests}. Explain why, list the entry requirements and the next intake.`,
+        `Recommend up to two of our programmes for an applicant with ${v.results} who is interested in: ${v.interests}. Explain why, list the entry requirements and the next intake.`,
     },
     {
       id: "eligibility",
@@ -132,7 +132,7 @@ export const ACTIONS = {
       blurb: "Check results against entry rules.",
       fields: [
         { name: "programme", label: "Programme", type: "select", options: PROGRAMMES },
-        { name: "qualification", label: "Qualification", type: "select", options: ["STPM", "A-Level", "UEC", "Diploma", "APU Foundation", "Other"] },
+        { name: "qualification", label: "Qualification", type: "select", options: ["STPM", "A-Level", "UEC", "Diploma", "Foundation programme", "Other"] },
         { name: "results", label: "Results", type: "text", placeholder: "e.g. CGPA 2.6", required: true },
       ],
       prompt: (v) =>
@@ -148,7 +148,7 @@ export const ACTIONS = {
         { name: "language", label: "Reply in", type: "select", options: ["English", "Bahasa Melayu", "Chinese"] },
       ],
       prompt: (v) =>
-        `Draft a reply in ${v.language} to this prospective student enquiry. Be warm, accurate to APU policy, never promise admission or scholarships, and end with a clear next step.\n\nEnquiry:\n${v.enquiry}`,
+        `Draft a reply in ${v.language} to this prospective student enquiry. Be warm, accurate to university policy, never promise admission or scholarships, and end with a clear next step.\n\nEnquiry:\n${v.enquiry}`,
     },
     {
       id: "followup",
@@ -212,7 +212,7 @@ export const ACTIONS = {
       title: "Find a document",
       blurb: "The right policy, with its owner.",
       fields: [{ name: "need", label: "What are you looking for?", type: "text", placeholder: "e.g. how long we keep student files", required: true }],
-      prompt: (v) => `Find the APU document that covers: ${v.need}. Quote the relevant rule, cite the source and say which office owns it.`,
+      prompt: (v) => `Find the university document that covers: ${v.need}. Quote the relevant rule, cite the source and say which office owns it.`,
     },
     {
       id: "summarise",
@@ -240,7 +240,7 @@ export const ACTIONS = {
         { name: "b", label: "Second topic", type: "text", placeholder: "e.g. procurement", required: true },
       ],
       prompt: (v) =>
-        `Compare APU's rules on ${v.a} and ${v.b} in a table: what each covers, approval levels, deadlines, and any overlap or conflict. Cite sources.`,
+        `Compare the university's rules on ${v.a} and ${v.b} in a table: what each covers, approval levels, deadlines, and any overlap or conflict. Cite sources.`,
     },
     {
       id: "memo",
@@ -252,7 +252,7 @@ export const ACTIONS = {
         { name: "to", label: "To", type: "text", placeholder: "e.g. all academic staff", required: true },
       ],
       prompt: (v) =>
-        `Draft a short memo to ${v.to} about ${v.topic}, based only on APU policy, with the key rules as bullets, sources, and a contact for questions.`,
+        `Draft a short memo to ${v.to} about ${v.topic}, based only on university policy, with the key rules as bullets, sources, and a contact for questions.`,
     },
   ],
 };

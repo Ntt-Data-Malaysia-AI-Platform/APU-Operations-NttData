@@ -8,7 +8,7 @@ import type { Persona } from "./personas.js";
  */
 
 export const TOOL_STATUS: Record<string, string> = {
-  search_apu_knowledge: "Searching approved APU documents",
+  search_knowledge: "Searching approved documents",
   get_it_service_status: "Checking IT service status",
   get_my_hr_record: "Checking your HR record",
   get_admissions_pipeline: "Checking the admissions pipeline",
@@ -69,10 +69,10 @@ const RECORDS: Record<string, () => unknown> = {
 
 export function runTool(name: string, rawInput: unknown, persona: Persona, sources: SourceRegistry): ToolOutcome {
   // Role-based access: an agent can only run its own tools.
-  if (name !== "search_apu_knowledge" && !persona.tools.includes(name)) {
+  if (name !== "search_knowledge" && !persona.tools.includes(name)) {
     return { content: `Tool ${name} is not available to this agent.`, isError: true };
   }
-  if (name === "search_apu_knowledge") {
+  if (name === "search_knowledge") {
     const query = String((rawInput as { query?: unknown })?.query ?? "").slice(0, 500);
     const chunks = searchKnowledge(query, persona.audiences);
     if (chunks.length === 0) {

@@ -46,9 +46,9 @@ export async function runDemo(
     parts.push(`**From the system** (sample data)\n\n${recordToMarkdown(JSON.parse(outcome.content))}`);
   }
 
-  emit({ type: "status", text: TOOL_STATUS.search_apu_knowledge });
+  emit({ type: "status", text: TOOL_STATUS.search_knowledge });
   await sleep(150);
-  const outcome = runTool("search_apu_knowledge", { query: question }, persona, sources);
+  const outcome = runTool("search_knowledge", { query: question }, persona, sources);
   if (outcome.sources?.length) {
     emit({ type: "sources", sources: sources.list() });
     parts.push(

@@ -97,7 +97,7 @@ export function itData() {
     topIssues: [
       { title: "Password expired after 90 days", count: 18 },
       { title: "MFA prompt not received on new phone", count: 11 },
-      { title: "APU-Secure Wi-Fi says no internet", count: 9 },
+      { title: "Campus-Secure Wi-Fi says no internet", count: 9 },
     ],
   };
 }

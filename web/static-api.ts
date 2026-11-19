@@ -26,7 +26,7 @@ export class AuthError extends Error {}
 
 // ---------- session (sessionStorage, with an in-memory fallback) ----------
 
-const SESSION_KEY = "apu-ops-session";
+const SESSION_KEY = "ntt-ops-session";
 const TTL_MS = 8 * 60 * 60 * 1000;
 let memorySession: string | null = null;
 

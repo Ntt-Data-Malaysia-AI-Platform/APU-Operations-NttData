@@ -1,8 +1,8 @@
 {
-  "name": "apu-operations-ai",
+  "name": "ntt-data-operations-ai",
   "version": "0.1.0",
   "private": true,
-  "description": "APU Operations AI: Gemini agents for IT, HR, admissions, finance and institutional knowledge. Static demo for GitHub Pages.",
+  "description": "NTT DATA Operations AI: Gemini agents for IT, HR, admissions, finance and institutional knowledge. Static demo for GitHub Pages.",
   "type": "module",
   "engines": {
     "node": ">=20"
