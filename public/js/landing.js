@@ -15,7 +15,7 @@ export function renderLanding(root, cfg, { lastPersona }) {
     <section class="hero">
       <div class="hero-copy">
         <span class="kicker">${icon("gemini", "spark-icon")} NTT DATA · Powered by Gemini</span>
-        <h1>Gemini AI for Education <span class="grad-text rainbow">Reimagined</span></h1>
+        <h1>Higher Education <span class="grad-text rainbow">Reimagined</span></h1>
         <p class="lead">Five AI agents for IT, HR, admissions, finance and administration. Each has a live dashboard, one-click tools, and answers grounded in your approved documents.</p>
         <div class="hero-cta">
           <a class="btn btn-primary" href="#personas">Choose an agent ${icon("arrow")}</a>
